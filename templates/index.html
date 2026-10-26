@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>ASCII Art Web</title>
   <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -32,8 +32,8 @@
 
       <label for="text">Your text</label>
       <div class="row">
-        <textarea name="text" id="text" maxlength="200" required placeholder="Write something...">{{.Text}}</textarea>
-        <span id="count" class="hint"></span>
+        <textarea id="text" name="text" maxlength="200" required placeholder="Write something...">{{.Text}}</textarea>
+        <span class="hint">Maximum 200 characters</span>
       </div>
 
       <div class="row">
@@ -50,14 +50,5 @@
       <pre>{{.Result}}</pre>
     {{end}}
   </div>
-<script>
-    const text = document.getElementById('text');
-    const count = document.getElementById('count');
-    function updateCount() {
-      count.textContent = text.value.length + ' / 200 characters';
-    }
-    text.addEventListener('input', updateCount);
-    updateCount();
-  </script>
 </body>
 </html>
